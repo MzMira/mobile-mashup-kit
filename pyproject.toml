@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mobile-mashup-kit"
+version = "0.1.0"
+description = "AI-assisted game mashup toolkit for mobile (Unity IL2CPP, Unity Mono, Cocos2d-x Lua)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "black>=23.0", "ruff>=0.1"]
+mcp = ["mcp>=1.0"]
+
+[project.scripts]
+mum = "mobile_mashup_kit.cli:main"
+mum-mcp = "mobile_mashup_kit.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.black]
+line-length = 100
