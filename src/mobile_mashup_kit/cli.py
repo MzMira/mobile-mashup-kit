@@ -111,3 +111,7 @@ def extract(apk_path: str, output: str) -> None:
 def main() -> None:
     """Entry point for the mum CLI."""
     cli()
+
+
+if __name__ == "__main__":
+    main()

@@ -25,8 +25,8 @@ env/
 Thumbs.db
 
 # Project
-dumps/
-assets/
+/dumps/
+/assets/
 *.apk
 *.apkm
 *.xapk
